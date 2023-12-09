@@ -26,28 +26,26 @@ class AoC
   private
 end
 
-
 if ARGV[0] == '1' || ARGV[0].nil?
   puts "Advent Of Code 2023 - Day #{DAY} Part 1"
 
   if ENV['SHOW_TEST']&.downcase == 'y'
     result = AoC.new(test_input).run_part_1!
     puts "Expected result: #{test_result_1}, actual: #{result.inspect}"
+  else
+    result = AoC.new(input).run_part_1!
+    puts "Result: #{result}"
   end
-
-  result = AoC.new(input).run_part_1!
-  puts "Result: #{result}"
 end
 
 if ARGV[0] == '2' || ARGV[0].nil?
   puts "Advent Of Code 2023 - Day #{DAY} Part 2"
 
-
   if ENV['SHOW_TEST']&.downcase == 'y'
     result = AoC.new(test_input).run_part_2!
     puts "Expected result: #{test_result_2}, actual: #{result}"
+  else
+    result = AoC.new(input).run_part_2!
+    puts "Result: #{result}"
   end
-
-  result = AoC.new(input).run_part_2!
-  puts "Result: #{result}"
 end
