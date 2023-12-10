@@ -35,7 +35,7 @@ class AoC
     end
     # use built-in ruby function for finding LCM (Least Common Multiple)
     # because it takes 2 parameters we recursively reduce it over array of numbers 
-    nk.reduce(nk[0]) { |acc, el| acc.lcm el }
+    nk.reduce(&:lcm)
   end
 
   private
